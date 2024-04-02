@@ -1,30 +1,19 @@
 import * as vscode from "vscode";
+import { insert, customInsert } from "./insert";
 import { log } from "./logger";
 
 export function activate(context: vscode.ExtensionContext) {
-  let disposable = vscode.commands.registerCommand(
-    "number.simple-insert",
-    () => {
-      let textEditor = vscode.window.activeTextEditor;
-      if (!textEditor) {
-        return; // No open text editor
-      }
-
-      const selections = textEditor.selections;
-      const start = 1;
-      const step = 1;
-
-      log.info(`start: ${start}, step: ${step}`);
-
-      textEditor.edit(function (builder) {
-        for (var i = 0; i < selections.length; i++) {
-          builder.replace(selections[i], `${start + i * step}`);
-        }
-      });
-    }
+  let simple = vscode.commands.registerCommand("number.simple-insert", () =>
+    insert(1, 1)
   );
 
-  context.subscriptions.push(disposable);
+  const custom = vscode.commands.registerCommand(
+    "number.custom-insert",
+    async () => await customInsert()
+  );
+
+  context.subscriptions.push(simple);
+  context.subscriptions.push(custom);
 }
 
 // This method is called when your extension is deactivated

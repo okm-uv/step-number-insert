@@ -16,6 +16,10 @@
       {
         "command": "number.simple-insert",
         "title": "Simple Insert"
+      },
+      {
+        "command": "number.custom-insert",
+        "title": "Custom Insert"
       }
     ]
   },
