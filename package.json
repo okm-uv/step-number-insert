@@ -2,7 +2,7 @@
   "name": "step-number-insert",
   "displayName": "Step Number Insert",
   "description": "",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "okm-uv",
   "repository": {
     "directory": "",
@@ -21,11 +21,11 @@
     "commands": [
       {
         "command": "number.simple-insert",
-        "title": "Simple Insert"
+        "title": "[Step Number Insert] Simple Insert"
       },
       {
         "command": "number.custom-insert",
-        "title": "Custom Insert"
+        "title": "[Step Number Insert] Custom Insert"
       }
     ]
   },
