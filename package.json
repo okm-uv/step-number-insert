@@ -4,6 +4,11 @@
   "description": "",
   "version": "0.0.1",
   "publisher": "okm-uv",
+  "repository": {
+    "directory": "",
+    "type": "",
+    "url": "https://github.com/okm-uv/step-number-insert"
+  },
   "engines": {
     "vscode": "^1.87.0"
   },
