@@ -1,10 +1,9 @@
 import * as vscode from "vscode";
 import { insert, customInsert } from "./insert";
-import { log } from "./logger";
 
 export function activate(context: vscode.ExtensionContext) {
   let simple = vscode.commands.registerCommand("number.simple-insert", () =>
-    insert(1, 1)
+    insert()
   );
 
   const custom = vscode.commands.registerCommand(
