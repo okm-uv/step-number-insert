@@ -1,6 +1,6 @@
 {
-  "name": "number",
-  "displayName": "number",
+  "name": "number-insert",
+  "displayName": "Number Insert",
   "description": "",
   "version": "0.0.1",
   "engines": {
