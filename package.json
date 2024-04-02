@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "number.helloWorld",
-        "title": "Hello World"
+        "command": "number.simple-insert",
+        "title": "Simple Insert"
       }
     ]
   },
