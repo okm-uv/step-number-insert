@@ -11,7 +11,7 @@ https://github.com/rust-lang/rust-analyzer/blob/master/LICENSE-MIT
 
 export const log = new (class {
   private enabled = true;
-  private readonly output = vscode.window.createOutputChannel("number");
+  private readonly output = vscode.window.createOutputChannel("step-number-insert");
 
   setEnabled(yes: boolean): void {
     log.enabled = yes;

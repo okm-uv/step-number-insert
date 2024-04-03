@@ -26,7 +26,9 @@ export const customInsert = async () => {
     })) ?? "1:1";
   log.info(`input: ${input}`);
 
-  const start = parseInt(input.split(":")[0]) || 1;
-  const step = parseInt(input.split(":")[1]) || 1;
-  insert(start, step);
+  const splitted = input.split(":");
+  const start = parseInt(splitted[0]) || 1;
+  const step = parseInt(splitted[1]) || 1;
+  const digit = parseInt(splitted[2]) || 1;
+  insert(start, step, digit);
 };
