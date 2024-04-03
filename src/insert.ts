@@ -21,7 +21,7 @@ export const insert = (start: number = 1, step: number = 1, digit: number = 1) =
 export const customInsert = async () => {
   const input =
     (await vscode.window.showInputBox({
-      placeHolder: "start:step:digit",
+      placeHolder: "start : step : digit",
       prompt: "Input format or format:start:step",
     })) ?? "1:1";
   log.info(`input: ${input}`);
