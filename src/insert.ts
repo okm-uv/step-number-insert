@@ -1,7 +1,7 @@
 import { log } from "./logger";
 import * as vscode from "vscode";
 
-export const insert = (start: number = 1, step: number = 1) => {
+export const insert = (start: number = 1, step: number = 1, digit: number = 1) => {
   let textEditor = vscode.window.activeTextEditor;
   if (!textEditor) {
     return; // No open text editor
@@ -9,11 +9,11 @@ export const insert = (start: number = 1, step: number = 1) => {
 
   const selections = textEditor.selections;
 
-  log.info(`start: ${start}, step: ${step}`);
+  log.info(`start: ${start}, step: ${step}, digit: ${digit}`);
 
   textEditor.edit(function (builder) {
     for (var i = 0; i < selections.length; i++) {
-      builder.replace(selections[i], `${start + i * step}`);
+      builder.replace(selections[i], `${start + i * step}`.padStart(digit, "0"));
     }
   });
 };
